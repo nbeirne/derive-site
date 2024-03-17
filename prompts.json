@@ -1,8 +1,8 @@
 [   
+     { "text": "Pick a color.\nGo towards it." },
+     { "text": "Pick a building in the distance. Go towards it." },
      { "text": "Follow a red vehicle." },
      { "text": "Step on cracks in the pavement." },
-     { "text": "Pick a color. Go towards it." },
-     { "text": "Pick a building in the distance. Go towards it." },
      { "text": "Go east for three blocks." },
      { "text": "Flip a coin. Heads means turn left, tails means turn right." },
      { "text": "Walk without a direction." },

@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{book}
+
+\usepackage{newtxtext, newtxmath}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+
+
+% fonts
+\usepackage{helvet}
+%\usepackage{anyfontsize}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\normalsize}{\fontsize{38pt}{38pt}\selectfont}
+ 
+% layout style + spacing
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[font=small,labelformat=empty]{caption} % Required for specifying captions to tables and figures
+\captionsetup[figure]{labelformat=default}
+
+\usepackage{varwidth}
+\linespread{1.10}
+
+% content
+\begin{document}
+
+\captionsetup[figure]{labelformat=empty}
+\pagestyle{empty}
+
+$for(postertext)$
+\vspace*{\fill}
+\begin{center}
+    \begin{minipage}{1.0\textwidth}
+        \centering 
+         \textbf{$postertext$}
+    \end{minipage}
+\end{center}
+\vfill % equivalent to \vspace{\fill}
+
+
+% align to bottom-right
+\vspace*{0pt}\vfill
+\hspace*{0pt}\hfill
+%\fbox{
+    \begin{varwidth}{4in}
+        \begin{center}
+            \includegraphics[width=3cm]{qr-code}\\[1mm]
+            \small https://walk.hydrus.xyz
+        \end{center}
+    \end{varwidth}
+%}
+
+\clearpage
+
+$endfor$
+\end{document}
+

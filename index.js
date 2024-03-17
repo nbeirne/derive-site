@@ -17,8 +17,9 @@ async function getPrompts() {
   }
 
   const data = await response.json();
-  return data;
+  return data["prompts"].concat(data["web"])
 }
+
 const prompts = getPrompts()
 
 function newPrompt() {
@@ -31,27 +32,31 @@ function newPrompt() {
   })
 }
 
-newPrompt()
 
-/*
-function createListItem(item) {
-  const li = document.createElement('li');
-  li.innerHTML = item.text;
-  return li;
+function fillList() {
+  function createListItem(item) {
+    const li = document.createElement('li');
+    li.innerHTML = item.text;
+    return li;
+  }
+  prompts.then(data => {
+    const preElement = document.getElementById('prompt-data');
+
+    //preElement.style.fontSize = '18px';
+
+    const ch = data.map(createListItem);
+    const ul = document.createElement('ul');
+
+    ch.forEach(child => {
+      ul.appendChild(child);
+    });
+
+    preElement.appendChild(ul);
+  })
 }
 
-prompts.then(data => {
-  const preElement = document.getElementById('prompt-data');
+fillList()
 
-  //preElement.style.fontSize = '18px';
+/*
 
-  const ch = data.map(createListItem);
-  const ul = document.createElement('ul');
-
-  ch.forEach(child => {
-    ul.appendChild(child);
-  });
-  
-  preElement.appendChild(ul);
-})
 */

@@ -1,25 +1,29 @@
-[   
-     { "text": "Pick a color.\nGo towards it." },
-     { "text": "Pick a building in the distance. Go towards it." },
-     { "text": "Follow a red vehicle." },
-     { "text": "Step on cracks in the pavement." },
-     { "text": "Go east for three blocks." },
-     { "text": "Flip a coin. Heads means turn left, tails means turn right." },
-     { "text": "Walk without a direction." },
-     { "text": "Look for rhyming signs." },
-     { "text": "Turn left or right. It's a free world." },
-     { "text": "Turn whenever you reach a red light." },
-     { "text": "When a street name starts with a vowel turn left." },
-     { "text": "Find an interesting tree." },
-     { "text": "Look at the chimneys." },
-     { "text": "Find a fancy car. Go in the direction it's wheels are pointing." },
-     { "text": "Find shade. Observe and enjoy it." },
-     { "text": "Find a place to sit for five minutes. Watch." },
-     { "text": "At the next opportunity turn right." },
-     { "text": "Stop and listen. Follow that sound." },
-     { "text": "Pick any direction and go straight for five blocks." },
-     { "text": "Go towards laughter. " },
-     { "text": "Wave and smile at the next surveillance camera." },
-     { "text": "Head in the noisiest direction." },
-     { "text": "What is this area know for? Find the opposite." }
-]
+{
+    "prompts": [   
+        { "size": 40, "text": "Pick a color.\nGo towards it." },
+        { "size": 40, "text": "Pick a building\nin the distance.\nGo towards it." },
+        { "size": 40, "text": "Follow a red vehicle." },
+        { "size": 40, "text": "Step on cracks\nin the pavement." },
+        { "size": 40, "text": "Go east for three blocks." },
+        { "size": 40, "text": "Flip a coin.\nHeads means turn left,\ntails means turn right." },
+        { "size": 40, "text": "Walk without a direction." },
+        { "size": 40, "text": "Look for rhyming signs." },
+        { "size": 40, "text": "Turn left or right.\nIt's a free world." },
+        { "size": 40, "text": "Turn whenever you reach a red light." },
+        { "size": 40, "text": "When a street name\nstarts with a vowel,\nturn left." },
+        { "size": 40, "text": "Find an interesting tree." },
+        { "size": 40, "text": "Look at the chimneys." },
+        { "size": 40, "text": "Find a fancy car.\nGo in the direction it's wheels are pointing." },
+        { "size": 40, "text": "Find shade.\nObserve and enjoy it." },
+        { "size": 40, "text": "Find a place to\nsit for five minutes.\nWatch." },
+        { "size": 40, "text": "At the next opportunity,\nturn right." },
+        { "size": 40, "text": "Stop and listen.\nFollow that sound." },
+        { "size": 40, "text": "Pick any direction.\nGo straight for\nfive blocks." },
+        { "size": 40, "text": "Go towards laughter." },
+        { "size": 40, "text": "Wave and smile\nat the next\nsurveillance camera." },
+        { "size": 40, "text": "Head in the\nnoisiest direction." }
+    ],
+    "web": [
+        { "size": 38, "text": "What is this area know for?\nFind the opposite." }
+    ]
+}

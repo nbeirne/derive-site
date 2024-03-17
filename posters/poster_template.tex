@@ -6,12 +6,11 @@
 \usepackage{hyperref}
 
 
-
 % fonts
 \usepackage{helvet}
 %\usepackage{anyfontsize}
 \renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\normalsize}{\fontsize{38pt}{38pt}\selectfont}
+\renewcommand{\normalsize}{\fontsize{40pt}{40pt}\selectfont}
  
 % layout style + spacing
 \usepackage{geometry}
@@ -39,7 +38,7 @@ $for(postertext)$
 \begin{center}
     \begin{minipage}{1.0\textwidth}
         \centering 
-         \textbf{$postertext$}
+         {\fontsize{$postertext.size$}{$postertext.size$}\selectfont\textbf{$postertext.text$}}
     \end{minipage}
 \end{center}
 \vfill % equivalent to \vspace{\fill}

@@ -1,6 +1,9 @@
 
-prompts=$(cat ../prompts.json | jq '.[].text' | sed -e 's/\\n/\\\\\\\\break /g' | jq -r | sed 's/^/- /g')
-prompts=$(echo "$prompts" | perl -pe 's/\n/\\n/')
+
+prompts=$(cat ../prompts.json| jq '.prompts[] | {"text": .text | sub("\n";"\\\\break ";"g"), "size"}')
+
+prompts=$(echo "$prompts" | jq -c | sed 's/^/- /g') # format for yaml
+prompts=$(echo "$prompts" | perl -pe 's/\n/\\n/') # replace newlines
 
 template=$(cat << 'END'
 ---

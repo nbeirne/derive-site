@@ -26,7 +26,31 @@
       h2,h3{font-size:25px;}
       h1,h2,h3{line-height:1.2;}
       a{color:#55D;}
+      .sigtext {
+          font-weight: bold;
+      }
+      /* button */
+      .center {
+        text-align:center;
+      }
+      button{
+        background-color: #136890; /* darker blue */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        /* text-align: center; */
+        /* text-decoration: none; */
+        /* display: inline-block; */
+        font-size: 18px;
+      }
+      button:hover {
+        filter: brightness(75%);
+      }
+      button:active {
+          transform: scale(0.90);
+      }
     </style>
+
 
   </head>
   <body>
@@ -40,38 +64,18 @@
 
     <p>The streets can be a liminal space. A place between other places. You go on them to get somewhere else - home, work, or a store. Usually we are only present on them in between spaces where we get or spend money.</p>
 
-    <p>Enter a <a href="https://en.wikipedia.org/wiki/Dérive">Dérive</a>. Take an unplanned journey through the urban landscape. Treat the street as it's own destination. Go on an walk, without needing a place to get to. Let yourself drift and follow your feelings.</p>
+    <p>Enter a <a href="https://en.wikipedia.org/wiki/Dérive">Dérive</a>. Take an unplanned journey through the urban landscape. Treat the street as its own destination. Go on an walk, without needing a place to get to. Let yourself drift and follow your feelings.</p>
 
-    <h3>Techniques</h3>
-    <p>Go on a walk following one or several of these rules. Treat the street as it's own location which can, and should be, explored.</p>
-    <ul>
+    <p>Here is a rule you can follow on your walk to help with your exploration:</p>
 
-      <li>Follow a red vehicle.</li>
-      <li>Step on cracks in the pavement.</li>
-      <li>Pick a color. Go towards it.</li>
-      <li>Pick a building in the distance. Go towards it.</li>
-      <li>Go east for three blocks.</li>
-      <li>Flip a coin. Heads means turn left, tails means turn right.</li>
-      <li>Walk without a direction.</li>
-      <li>Look for rhyming signs.</li>
-      <li>Turn left or right. It's a free world.</li>
-      <li>Turn whenever you reach a red light.</li>
-      <li>When a street name starts with a vowel turn left.</li>
-      <li>Find an interesting tree.</li>
-      <li>Look at the chimneys.</li>
-      <li>Find a fancy car. Go in the direction it's wheels are pointing.</li>
-      <li>Find shade. Observe it.</li>
-      <li>Find a place to sit for five minutes. Watch.</li>
-      <li>At the next opportunity turn right.</li>
-      <li>Stop and listen. Follow that sound.</li>
-      <li>Pick any direction and go straight for five blocks.</li>
-      <li>Go towards laughter. </li>
-      <li>Turn left at the next corner.</li>
-      <li>Wave and smile at the next surveillance camera.</li>
-      <li>Head in the noisiest direction.</li>
-      <li>What is this area know for? Find the opposite.</li>
+    </br>
 
-    </ul>
+    <div class="center">
+      <div class="sigtext" id="prompt-data"></div>
+      <script src="index.js"></script>
+      </br>
+      <button onclick="newPrompt()">New Prompt</button>
+    </div>
 
     </br>
     <h3>Contact Me.</h3>

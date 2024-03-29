@@ -22,6 +22,6 @@ echo "$text"
 # write data
 rm -rf template.md
 echo "$text" >> template.md
-pandoc -f markdown -t pdf ./template.md -o posters.pdf --template ./poster_template.tex
+pandoc --pdf-engine=xelatex -f markdown -t pdf ./template.md -o posters.pdf --template ./poster_template.tex
 rm -rf template.md
 

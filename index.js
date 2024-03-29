@@ -1,9 +1,3 @@
-const arr = [
-  {id: 1, name: 'Alice', age: 29},
-  {id: 2, name: 'Bobby Hadz', age: 30},
-  {id: 3, name: 'Carl', age: 31},
-];
-
 async function getPrompts() {
   const response = await fetch(
     './prompts.json',
@@ -22,41 +16,56 @@ async function getPrompts() {
 
 const prompts = getPrompts()
 
-function newPrompt() {
+function randomPrompt(handler) {
   prompts.then(data => {
     var item = data[Math.floor(Math.random()*data.length)];
-
-
-    const preElement = document.getElementById('prompt-data');
-    preElement.innerHTML = item.text;
+    handler(item);
   })
 }
 
-
-function fillList() {
+function showFullList() {
   function createListItem(item) {
     const li = document.createElement('li');
     li.innerHTML = item.text;
     return li;
   }
+
   prompts.then(data => {
     const preElement = document.getElementById('prompt-data');
-
-    //preElement.style.fontSize = '18px';
-
     const ch = data.map(createListItem);
     const ul = document.createElement('ul');
-
     ch.forEach(child => {
       ul.appendChild(child);
     });
-
     preElement.appendChild(ul);
   })
 }
 
-fillList()
+function showRandomPicker() {
+  prompts.then(_ => {
+    const promptData = document.getElementById('prompt-data');
+    const div = document.createElement('div');
+    div.className = 'center';
+    
+    const promptText = document.createElement('div');
+    promptText.style = 'font-weight: bold;';
 
-/*
+    const btn = document.createElement('button');
+    btn.addEventListener('click', function() {
+      randomPrompt(function(item) {
+        promptText.innerHTML = item.text;
+      });
+    });
+    btn.textContent = "New Prompt";
 
-*/
+    div.appendChild(promptText);
+    div.appendChild(btn);
+    promptData.appendChild(div);
+      randomPrompt(function(item) {
+        promptText.innerHTML = item.text;
+      });
+  })
+}
+
+//showFullList()
+showRandomPicker()

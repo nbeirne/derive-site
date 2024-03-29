@@ -1,17 +1,29 @@
 \documentclass[12pt,a4paper]{book}
 
-\usepackage{newtxtext, newtxmath}
-\usepackage{color}
-\usepackage{titlesec}
-\usepackage{hyperref}
+\usepackage{amsmath,amsfonts,amsthm}
+
+%\usepackage{mwe}
+%\renewcommand{\headrulewidth}{0pt}
+%\setlength{\footheight}{30pt}
+%\setlength{\headheight}{0pt}
 
 
 % fonts
-\usepackage{helvet}
-%\usepackage{anyfontsize}
-\renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\normalsize}{\fontsize{40pt}{40pt}\selectfont}
- 
+%\usepackage{fontspec}
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{anyfontsize}
+%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\small}{\fontsize{18pt}{18pt}\selectfont}
+\renewcommand{\tiny}{\fontsize{15pt}{15pt}\selectfont}
+\renewcommand{\normalsize}{\fontsize{40pt}{40pt}\fontseries{b}\selectfont}
+
+
+
 % layout style + spacing
 \usepackage{geometry}
 \geometry{letterpaper, portrait, margin=1in}
@@ -25,36 +37,72 @@
 \captionsetup[figure]{labelformat=default}
 
 \usepackage{varwidth}
-\linespread{1.10}
+%\linespread{1.10}
+
+
+
+
+
+%\fancyfoot{\leavevmode\rlap{\parbox[b]{\textwidth}{%
+%  \small{Get lost in a familar place.}%
+%}%
+%  \hfill\llap{%
+%        \begin{varwidth}{4in}%
+%            \centering%
+%            \includegraphics[width=3cm]{qr-code}\\[3cm]%
+%            \tiny{\texttt{https://walk.hydrus.xyz}}%
+%        \end{varwidth}%
+%}}}
 
 % content
 \begin{document}
-
+\noindent
 \captionsetup[figure]{labelformat=empty}
-\pagestyle{empty}
 
 $for(postertext)$
+\pagestyle{empty}
+
 \vspace*{\fill}
+
 \begin{center}
     \begin{minipage}{1.0\textwidth}
-        \centering 
-         {\fontsize{$postertext.size$}{$postertext.size$}\selectfont\textbf{$postertext.text$}}
+        \centering{
+            $postertext.text$\par
+        }
     \end{minipage}
 \end{center}
-\vfill % equivalent to \vspace{\fill}
 
+\vspace*{\fill}
 
-% align to bottom-right
-\vspace*{0pt}\vfill
-\hspace*{0pt}\hfill
-%\fbox{
-    \begin{varwidth}{4in}
-        \begin{center}
-            \includegraphics[width=3cm]{qr-code}\\[1mm]
-            \small https://walk.hydrus.xyz
-        \end{center}
-    \end{varwidth}
+%\lfoot[b]{%
+%  \raisebox{-1.575cm}{\small{Get lost in a familiar place}}%
 %}
+%\cfoot{}
+%\rfoot[t]{%
+%    \begin{minipage}[b]{.4\textwidth}%
+%        \hspace*{\fill}%
+%        \begin{varwidth}{4in}%
+%            \centering%
+%            \includegraphics[height=3cm,width=3cm]{qr-code}\\%
+%            \tiny{\texttt{https://walk.hydrus.xyz}\par}%
+%        \end{varwidth}%
+%    \end{minipage}%
+%}
+
+\vspace*{\fill}\vfill
+{
+\begin{minipage}[b][][t]{\textwidth}%
+    \begin{minipage}[b]{.4\textwidth}%
+      \raisebox{-1.45cm}{\small{Get lost in a familiar place}}%
+\end{minipage}\hfill\begin{minipage}[b]{.4\textwidth}%
+    \begin{varwidth}{4in}%
+        \centering%
+        \includegraphics[height=3cm,width=3cm]{qr-code}\\[0.1cm]%
+        \tiny{\texttt{https://walk.hydrus.xyz}\par}%
+    \end{varwidth}%
+\end{minipage}%
+\end{minipage}%
+}
 
 \clearpage
 

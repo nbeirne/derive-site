@@ -51,6 +51,7 @@ function showRandomPicker() {
     promptText.style = 'font-weight: bold;';
 
     const btn = document.createElement('button');
+    btn.className = "\"class=\"plausible-event-name=NewPrompt\""
     btn.addEventListener('click', function() {
       randomPrompt(function(item) {
         promptText.innerHTML = item.text;
